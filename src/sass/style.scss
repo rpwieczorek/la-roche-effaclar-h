@@ -211,15 +211,16 @@ body {
     }
     &__wrapper {
       margin: 20px auto 0;
-      width: 90%;
+      width: 95%;
       display: flex;
       flex-wrap: wrap;
-      justify-content: space-around;
+      justify-content: center;
       gap: 15px 2px;
     }
     &__single {
-      width: 112px;
+      margin: 0 auto;
       overflow: hidden;
+      flex-basis: 33%;
       &:hover {
         .es-ingr__image {
           transform: scale(1.1);
@@ -228,11 +229,14 @@ body {
     }
     &__image {
       @include img;
-      margin: 10px 0;
+      max-width: 112px;
+      margin: 10px auto;
       transition: all 0.3s;
     }
     &__item {
+      max-width: 112px;
       @include text;
+      margin: 0 auto;
       font-size: 11px;
       text-transform: none;
       font-family: $regular;
@@ -343,7 +347,7 @@ body {
     }
   }
   .es-obligations {
-    width: 90%;
+    width: 95%;
     margin: 40px auto;
     text-align: center;
     &__title {
@@ -361,11 +365,11 @@ body {
       width: 100%;
       display: flex;
       flex-wrap: wrap;
-      justify-content: space-around;
+      justify-content: center;
       gap: 10px 10px;
     }
     &__single {
-      width: 340px;
+      width: 320px;
       overflow: hidden;
       position: relative;
       &:hover {
@@ -403,6 +407,15 @@ body {
 }
 
 @media screen and (min-width: 768px) {
+  .es-ingr {
+    &__wrapper {
+      flex-wrap: nowrap  !important;
+    }
+    &__single {
+      flex-basis: 16% !important;
+      width: 112px  !important;
+    }
+  }
   .es-cross {
     &__container {
       width: 768px;
